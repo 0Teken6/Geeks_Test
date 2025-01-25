@@ -5,6 +5,12 @@ from rest_framework.generics import ListAPIView, CreateAPIView, RetrieveAPIView,
 from .serializers import TaskSerializer
 
 
+'''
+Я мог сделать с ModelViewSet или с ListCreateAPIView  и прочие
+но я по ТЗ шел и на такое задание решил заморочится и сделать так
+плюс в urls понятнее
+'''
+
 class TaskListAPIView(ListAPIView):
     queryset = Task.objects.all()
     serializer_class = TaskSerializer
